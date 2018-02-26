@@ -1,6 +1,6 @@
 # wifi0(Rx)--wifi1(Tx)
 
-
+# install
 sudo iwconfig wifi1 mode master
 sudo apt-get -y install haveged
 sudo apt-get -y install dnsmasq
