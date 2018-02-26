@@ -1,0 +1,33 @@
+# install
+sudo apt-get install xvfb
+sudo apt-get install xserver-xorg-core
+sudo apt-get install xserver-xorg-video-dummy
+sudo apt-get install x11vnc
+
+# create dummy screen @ /usr/share/X11/xorg.conf.d/xorg.conf
+Section "Device"    Identifier  "Configured Video Device"
+    Driver      "dummy"
+    VideoRam 256000
+EndSection
+
+
+Section "Monitor"
+    Identifier  "Configured Monitor"
+    HorizSync 5.0 - 1000.0
+    VertRefresh 5.0 - 200.0
+    Modeline "1280x800" 24.15 1280 1312 1400 1432 800 819 822 841
+EndSection
+
+Section "Screen"
+    Identifier  "Default Screen"
+    Monitor     "Configured Monitor"
+    Device      "Configured Video Device"
+    DefaultDepth 24
+    SubSection "Display"
+    Depth 24
+    Modes "1920x1080" "1280x800"
+    EndSubSection
+EndSection
+
+# SSH using xllvnc
+sudo x11vnc -display :0 -auth /var/run/lightdm/root/:0
