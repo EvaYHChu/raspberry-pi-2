@@ -7,3 +7,12 @@ sudo make install
 
 # config
 /usr/local/bin/noip2 -C
+
+# manually update
+sudo noip2
+
+# update routinely
+sudo nano /etc/crontab
+---
+*/5 *   * * *   root    noip2
+---
