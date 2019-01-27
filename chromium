@@ -1,0 +1,20 @@
+# ref:https://ubuntu-mate.community/t/tutorial-install-working-chromium-50/6762
+
+# Remove chromium installation
+sudo apt-get remove chromium-codecs-ffmpeg-extra chromium-browser chromium-browser-l10n
+
+# Download the packages from launchpad
+wget https://launchpad.net/~canonical-chromium-builds/+archive/ubuntu/stage/+build/9739240/+files/chromium-codecs-ffmpeg-extra_50.0.2661.102-0ubuntu0.14.04.1.1117_armhf.deb https://launchpad.net/~canonical-chromium-builds/+archive/ubuntu/stage/+build/9739240/+files/chromium-browser_50.0.2661.102-0ubuntu0.14.04.1.1117_armhf.deb http://launchpadlibrarian.net/259414466/chromium-browser-l10n_50.0.2661.102-0ubuntu0.14.04.1.1117_all.deb https://launchpad.net/~ubuntu-security/+archive/ubuntu/ppa/+build/8993250/+files/libgcrypt11_1.5.3-2ubuntu4.3_armhf.deb
+
+# Install the packages
+sudo dpkg -i libgcrypt11_1.5.3-2ubuntu4.3_armhf.deb
+sudo dpkg -i chromium-codecs-ffmpeg-extra_50.0.2661.102-0ubuntu0.14.04.1.1117_armhf.deb
+sudo dpkg -i chromium-browser_50.0.2661.102-0ubuntu0.14.04.1.1117_armhf.deb
+sudo dpkg -i chromium-browser-l10n_50.0.2661.102-0ubuntu0.14.04.1.1117_all.deb
+
+# Block updates on chromium packages
+sudo apt-mark hold chromium-codecs-ffmpeg-extra chromium-browser chromium-browser-l10n
+
+# Note - When a new working release will be available you can unblock packages updating with
+sudo apt-mark unhold chromium-codecs-ffmpeg-extra chromium-browser chromium-browser-l10n
+sudo apt-get upgrade
