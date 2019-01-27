@@ -12,13 +12,13 @@ sudo ssserver -c /etc/shadowsocks-python/config.json -d start
 
 # config
 Shadowsocks-Python：
-/etc/init.d/shadowsocks-python start | stop | restart | status
+/etc/shadowsocks-python/config.json
 
 ShadowsocksR：
-/etc/init.d/shadowsocks-r start | stop | restart | status
+/etc/shadowsocks-r/config.json
 
 Shadowsocks-Go：
-/etc/init.d/shadowsocks-go start | stop | restart | status
+/etc/shadowsocks-go/config.json
 
 Shadowsocks-libev：
-/etc/init.d/shadowsocks-libev start | stop | restart | status
+/etc/shadowsocks-libev/config.json
