@@ -22,3 +22,4 @@ Shadowsocks-Go：
 
 Shadowsocks-libev：
 /etc/shadowsocks-libev/config.json
+/etc/shadowsocks-manager/config.json
