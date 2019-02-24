@@ -1,2 +1,5 @@
 # for model 3 B+
 sudo rpi-update
+
+# or
+sudo CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt rpi-update
