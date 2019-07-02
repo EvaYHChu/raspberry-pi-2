@@ -1,13 +1,16 @@
 wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh
-chmod +x shadowsocks-go.sh
-./shadowsocks-go.sh 2>&1 | tee shadowsocks-go.log
+sudo chmod +x shadowsocks-go.sh
+sudo ./shadowsocks-go.sh 2>&1 | tee shadowsocks-go.log
 
-nano /etc/shadowsocks/config.json
+sudo nano /etc/shadowsocks/config.json
 
-/etc/init.d/shadowsocks start
-/etc/init.d/shadowsocks stop
-/etc/init.d/shadowsocks status
-/etc/init.d/shadowsocks restart
+sudo /etc/init.d/shadowsocks start
+sudo /etc/init.d/shadowsocks stop
+sudo /etc/init.d/shadowsocks status
+sudo /etc/init.d/shadowsocks restart
 
 
 ./shadowsocks-go.sh uninstall
+
+# ARM
+sudo apt install binfmt-support qemu qemu-user-static
