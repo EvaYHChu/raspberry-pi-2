@@ -11,3 +11,9 @@ nano /etc/v2ray/config.json
 service v2ray status
 
 netstat -apn | grep v2ray
+
+# update v2ray
+
+
+sudo apt-get install socat
+curl  https://get.acme.sh | sh
