@@ -21,3 +21,7 @@ curl  https://get.acme.sh | sh
 # update
 wget https://install.direct/go.sh
 bash go.sh
+
+#
+sudo v2ray [-version] [-test] [-config=config.json] [-format=json]
+sudo v2ray config
