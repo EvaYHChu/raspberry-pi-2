@@ -3,7 +3,7 @@
 sudo mkdir /usr/bin/v2ray/
 sudo mkdir /usr/bin/v2ray/v2ray
 sudo su
-bash <(curl -L -s https://install.direct/go.sh)
+
 
 nano /etc/v2ray/config.json
 /usr/bin/v2ray/v2ray --test --config /etc/v2ray/config.json
@@ -12,13 +12,16 @@ service v2ray status
 
 netstat -apn | grep v2ray
 
-# update v2ray
 
 
 sudo apt-get install socat
 curl  https://get.acme.sh | sh
 
 # update
+apt-get update -y && apt-get install curl -y
+bash <(curl -L -s https://install.direct/go.sh)
+
+# update v2ray
 sudo wget https://install.direct/go.sh
 sudo bash go.sh
 
