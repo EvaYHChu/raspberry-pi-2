@@ -1,0 +1,10 @@
+
+sudo nano /etc/rc.local
+---
+
+service fail2ban start
+sudo /etc/init.d/shadowsocks start
+sudo service v2ray start
+exit 0
+
+---
