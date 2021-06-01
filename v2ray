@@ -33,3 +33,5 @@ sudo v2ray config
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh)
 nano /usr/local/etc/v2ray/config.json
+
+# config file example https://github.com/v2fly/v2ray-examples
