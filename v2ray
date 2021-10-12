@@ -35,3 +35,6 @@ bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/
 nano /usr/local/etc/v2ray/config.json
 
 # config file example https://github.com/v2fly/v2ray-examples
+
+## menu
+bash <(curl -sL http://s.hijk.art/v2ray.sh)
