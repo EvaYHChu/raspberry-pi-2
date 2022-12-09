@@ -16,3 +16,24 @@ sudo nano /etc/crontab
 ---
 */5 *   * * *   root    noip2
 ---
+
+
+# force using config file
+noip2 -S
+
+#sudo nano /etc/systemd/system/noip2.service
+
+[Unit]
+Description=No-ip.com dynamic IP address updater
+After=network.target
+After=syslog.target
+
+[Install]
+WantedBy=multi-user.target
+Alias=noip.service
+
+[Service]
+# Start main service
+ExecStart=/usr/local/bin/noip2
+Restart=always
+Type=forking
