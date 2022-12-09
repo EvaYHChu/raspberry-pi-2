@@ -1,0 +1,8 @@
+# Service nginx restart fail
+
+nginx -t
+
+# check reroute and update
+sudo nano  /etc/nginx/conf.d/xxxx.conf
+sudo service nginx restart
+
