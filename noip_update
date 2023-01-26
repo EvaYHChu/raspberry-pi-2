@@ -15,6 +15,7 @@ sudo noip2
 sudo nano /etc/crontab
 ---
 */5 *   * * *   root    noip2
+*/5 *   * * *   root    sudo systemctl restart noip2
 ---
 
 
