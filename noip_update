@@ -41,3 +41,7 @@ Type=forking
 
 
 sudo systemctl enable noip2
+
+# 4) Execute `sudo systemctl daemon-reload`
+# 5) Execute `sudo systemctl enable noip2`
+# 6) Execute `sudo systemctl start noip2`
