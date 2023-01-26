@@ -37,3 +37,7 @@ Alias=noip.service
 ExecStart=/usr/local/bin/noip2
 Restart=always
 Type=forking
+
+
+
+sudo systemctl enable noip2
