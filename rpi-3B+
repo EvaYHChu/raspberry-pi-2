@@ -12,3 +12,26 @@ sudo ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key
 
 # smb
 sudo apt-get install samba
+
+
+
+/etc/network/interfaces
+
+
+auto lo
+iface lo inet loopback
+
+auto dsl-provider
+iface dsl-provider inet ppp
+pre-up /bin/ip link set enxb827eb2de87d up # line maintained by pppoeconf
+provider dsl-provider
+
+auto enxb827eb2de87d
+iface enxb827eb2de87d inet manual
+
+
+
+auto ppp0
+iface ppp0 inet ppp
+pre-up /sbin/ifconfig eth0 up # line maintained by pppoeconf
+provider dsl-provider
