@@ -1,0 +1,5 @@
+# error on linux-image-4.15.0-142-generic
+
+sudo apt remove initramfs-tools
+sudo apt clean
+sudo apt -y install initramfs-tools
