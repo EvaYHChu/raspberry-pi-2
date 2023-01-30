@@ -1,0 +1,13 @@
+
+sudo nano /etc/network/interface
+auto dsl-provider
+iface dsl-provider inet ppp
+pre-up /sbin/ifconfig eth0 up # line maintained by pppoeconf
+provider dsl-provider
+
+change to
+
+auto ppp0
+iface ppp0 inet ppp
+pre-up /sbin/ifconfig eth0 up # line maintained by pppoeconf
+provider dsl-provider
