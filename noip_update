@@ -46,3 +46,8 @@ sudo systemctl enable noip2
 # 4) Execute `sudo systemctl daemon-reload`
 # 5) Execute `sudo systemctl enable noip2`
 # 6) Execute `sudo systemctl start noip2`
+
+
+## update noip web
+sudo systemctl stop noip2
+sudo noip2 -C
