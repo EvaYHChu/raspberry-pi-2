@@ -1,0 +1,8 @@
+# upload or download file from server and local computer
+# ref: https://bcc16.ncu.edu.tw/6/putty/pscp.html
+
+# download
+pscp name@server_ip:/home/data.file d:/data.file
+
+#upload
+pscp d:/data.file name@server_ip:/home/data.file
