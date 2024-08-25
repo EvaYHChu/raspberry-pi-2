@@ -1,6 +1,8 @@
 
 sudo nano /etc/rc.local
 ---
+sudo poff -a
+sudo pon dsl-provider
 
 service fail2ban start
 sudo /etc/init.d/shadowsocks start
