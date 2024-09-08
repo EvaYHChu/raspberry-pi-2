@@ -16,6 +16,7 @@ sudo nano /etc/crontab
 ---
 */5 *   * * *   root    noip2
 */5 *   * * *   root    sudo systemctl restart noip2
+*/5 *   * * *   root    sudo noip2 -i $(hostname -I | cut -f2 -d' ')
 ---
 
 
